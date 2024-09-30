@@ -72,9 +72,10 @@ def analyzer():
 
         #Taking output as String
         txt = sentimentAnalysis.sentiment
+        score = sentimentAnalysis.confidence_scores
          
         #Printing Final Output
-        output = 'Sentiment of Given Speech is ' + txt
+        output = 'Sentiment of Given Speech is ' + txt +" with confidence scores: \n"+f"\n Positive: {score.positive:.2f} \n Negative: {score.negative:.2f} \n Neutral: {score.neutral:.2f}"
     else:
         
         output = 'No Input Provided by the user'
